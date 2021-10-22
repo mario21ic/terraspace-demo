@@ -1,5 +1,6 @@
 resource "random_pet" "this" {
-  length = 2
+  #length = 2
+  length = <%= default_random_pet_length %> # only for tests
 }
 
 module "bucket" {

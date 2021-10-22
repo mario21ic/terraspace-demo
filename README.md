@@ -51,10 +51,13 @@ terraspace build demo
 
 Helpers:
 ```
-terraspace new helper demo --type stack
+./terraspace.sh new helper demo --type stack
 cat app/stacks/demo/config/helpers/demo_helper.rb
-
 terraspace up demo
+
+./terraspace.sh new helper custom --type project
+cat config/helpers/custom_helper.rb
+cat app/stacks/demo/main.tf
 ```
 
 Testing Harness:
@@ -88,6 +91,16 @@ cd app/stacks/demo
 bundle
 terraspace test
 ls -la /tmp/terraspace/test-harnesses/demo-harness
+```
+
+Testing Project-level helpers:
+```
+./terraspace.sh new test demo --type project
+cat spec/demo_spec.rb
+cat spec/spec_helper.rb
+cat config/helpers/custom_helper.rb
+
+./terraspace.sh test
 ```
 
 Arg CLI

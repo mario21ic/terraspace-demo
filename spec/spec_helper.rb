@@ -14,6 +14,7 @@ end
 
 RSpec.configure do |c|
   c.before(:all) do
+    # Esto carga todos los helpers del project
     Dir.glob("config/helpers/**/*.rb").each do |path|
       require "./#{path}"
       name = path.sub(%r{config/helpers/},'').sub('.rb','').camelize
