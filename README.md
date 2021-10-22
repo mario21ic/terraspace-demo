@@ -79,6 +79,17 @@ ls -la /tmp/terraspace/test-harnesses/example-harness
 ls -la /tmp/terraspace/plans/example-*/*.plan
 ```
 
+Testing Stack-level:
+```
+./terraspace.sh new test demo --type stack
+ls -la app/stacks/demo/test
+
+cd app/stacks/demo
+bundle
+terraspace test
+ls -la /tmp/terraspace/test-harnesses/demo-harness
+```
+
 Arg CLI
 ```
 terraspace new arg --type project
