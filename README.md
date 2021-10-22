@@ -60,13 +60,6 @@ cat config/helpers/custom_helper.rb
 cat app/stacks/demo/main.tf
 ```
 
-Testing Harness:
-```
-./terraspace.sh new test demohardness
-ls -la spec/
-./terraspace test
-```
-
 Testing Module-level:
 ```
 ./terraspace.sh new test example --type module
