@@ -37,5 +37,10 @@ describe "main" do
     output_value2 = terraspace.output("demo", "helper_out")
     expect(output_value2).to eq("my return word is: xD")
 
+    module_bucket = terraspace.state_resource('module.bucket')
+    acl = module_bucket["instances"][0]["attributes"]["acl"]
+    puts "acl: #{acl}"
+    expect(acl).to eq "public-read"
+
   end
 end
