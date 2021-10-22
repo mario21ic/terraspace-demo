@@ -8,7 +8,7 @@ describe "main" do
       modules: {example: mod_path},
       # See: https://terraspace.cloud/docs/testing/test-harness/
       # config: "spec/fixtures/config",
-      # tfvars: {example: "spec/fixtures/tfvars/test.tfvars"},
+      tfvars: {example: "spec/fixtures/tfvars/test.tfvars"},
     )
     terraspace.up("example")
   end
@@ -17,11 +17,11 @@ describe "main" do
   end
 
   it "successful deploy" do
-    # Replace with your own test
-    expect(true).to be true
-    # Example
-    # pp terraspace.outputs
-    # output_value = terraspace.output("example", "name")
-    # expect(output_value).to include("some-value")
+    #expect(true).to be true
+    
+    pp terraspace.outputs
+    output_value = terraspace.output("example", "name")
+    #expect(output_value).to include("terraform-")
+    expect(output_value).to eq("bucket-test-terraspace")
   end
 end

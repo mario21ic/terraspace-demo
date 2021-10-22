@@ -57,12 +57,26 @@ cat app/stacks/demo/config/helpers/demo_helper.rb
 terraspace up demo
 ```
 
-Testing:
+Testing Harness:
 ```
-terraspace new test example --type module
+./terraspace.sh new test demohardness
+ls -la spec/
+./terraspace test
+```
+
+Testing Module-level:
+```
+./terraspace.sh new test example --type module
 cat app/modules/example/test/spec/main_spec.rb
 
+cd app/modules/example
+bundle
 terraspace test
+
+ls -la .terraspace-cache/us-east-1/test/modules/example
+tail /tmp/terraspace/log/init/example.log
+ls -la /tmp/terraspace/test-harnesses/example-harness
+ls -la /tmp/terraspace/plans/example-*/*.plan
 ```
 
 Arg CLI
