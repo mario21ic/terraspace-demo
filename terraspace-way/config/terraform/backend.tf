@@ -4,6 +4,6 @@ terraform {
     key            = "<%= expansion(':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
     region         = "<%= expansion(':REGION') %>"
     encrypt        = true
-    dynamodb_table = "terraform_locks"
+    dynamodb_table = "terraspace_locks"
   }
 }

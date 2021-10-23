@@ -1,1 +1,4 @@
-# This is where you put your variables declaration
+variable "env" {}
+variable "region" {}
+variable "vpc_id" {}
+variable "subnet_id" {}
