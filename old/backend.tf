@@ -7,3 +7,9 @@ terraform {
   }
 }
 
+#terraform {
+# backend "gcs" {
+#   bucket  = "mario-tfstate"
+#   prefix  = "terraform/state"
+# }
+#}

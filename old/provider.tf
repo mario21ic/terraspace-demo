@@ -5,3 +5,9 @@ provider "aws" {
 
 # Credentials are loaded from .env file
 provider "newrelic" {}
+
+provider "google" {
+  project = "innate-entry-273803"
+  region  = "us-central1"
+}
+
