@@ -8,3 +8,4 @@ output "myKey" {
   description = "Demo for test arg cli"
   value       = var.myKey
 }
+

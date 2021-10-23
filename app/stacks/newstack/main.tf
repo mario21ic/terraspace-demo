@@ -9,3 +9,4 @@ module "bucket" {
   bucket     = "terraspace-newstack-${random_pet.this.id}"
   acl        = var.acl
 }
+
