@@ -1,6 +1,7 @@
 # RDS
 module "rds_sg" {
   source = "terraform-aws-modules/security-group/aws"
+  version = "4.3.0"
   #source = "../../../../../vendor/modules/sg"
 
   name        = "rds-sg"
@@ -29,7 +30,7 @@ module "rds_instance" {
   version = "~> 3.0"
   #source = "../../../../../vendor/modules/rds"
 
-  identifier = "vdh-conbench"
+  identifier = "my-rds"
 
   engine            = "postgres"
   engine_version    = "12.7"
@@ -60,7 +61,7 @@ module "rds_instance" {
   }
 
   # DB subnet group
-  subnet_ids = module.vpc.private_subnet_ids
+  subnet_ids = module.vpc.private_subnets
 
   family = "postgres12"
   major_engine_version = "12"
