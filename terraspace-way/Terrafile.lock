@@ -12,7 +12,7 @@ sg:
   sha: 8799422bab175e523ac6ddbf7d44fe6b0a1dc627
 vpc:
   source: terraform-aws-modules/vpc/aws
-  stack: simple-vpc
+  version: 3.10.0
   type: registry
   url: https://github.com/terraform-aws-modules/terraform-aws-vpc
-  sha: 39eae2176050671617342e2dd40860b34a6febe8
+  sha: afdc16e73f3f83963d3f2f89a3508575cf8a23db
