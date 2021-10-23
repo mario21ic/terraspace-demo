@@ -51,18 +51,18 @@ terraspace build demo
 
 Helpers:
 ```
-./terraspace.sh new helper demo --type stack
+terraspace new helper demo --type stack
 cat app/stacks/demo/config/helpers/demo_helper.rb
 terraspace up demo
 
-./terraspace.sh new helper custom --type project
+terraspace new helper custom --type project
 cat config/helpers/custom_helper.rb
 cat app/stacks/demo/main.tf
 ```
 
 Testing Module-level:
 ```
-./terraspace.sh new test example --type module
+terraspace new test example --type module
 cat app/modules/example/test/spec/main_spec.rb
 
 cd app/modules/example
@@ -77,7 +77,7 @@ ls -la /tmp/terraspace/plans/example-*/*.plan
 
 Testing Stack-level:
 ```
-./terraspace.sh new test demo --type stack
+terraspace new test demo --type stack
 ls -la app/stacks/demo/test
 
 cd app/stacks/demo
@@ -88,12 +88,12 @@ ls -la /tmp/terraspace/test-harnesses/demo-harness
 
 Testing Project-level helpers:
 ```
-./terraspace.sh new test demo --type project
+terraspace new test demo --type project
 cat spec/demo_spec.rb
 cat spec/spec_helper.rb
 cat config/helpers/custom_helper.rb
 
-./terraspace.sh test
+terraspace test
 ```
 
 Arg CLI

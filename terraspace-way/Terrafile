@@ -17,6 +17,7 @@ org "boltops-tools" # set default org
 mod "s3", source: "git@github.com:boltops-tools/terraform-aws-s3"
 mod "sg", source: "terraform-aws-modules/security-group/aws", version: "3.10.0"
 
-mod "vpc", source: "terraform-aws-modules/vpc/aws", stack: "simple-vpc"
+#mod "vpc", source: "terraform-aws-modules/vpc/aws", version: "3.10.0", stack: "simple-vpc"
+mod "vpc", source: "terraform-aws-modules/vpc/aws", version: "3.10.0"
 
 
